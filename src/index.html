@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+</head>
+
+<body class="body">
+    <div class="wrapper">
+
+        <header class="header">
+            <img class="header__logo" src="<%=require('./images/header_vector.svg')%>" alt="Место-Россия">
+        </header>
+
+        <main class="content">
+
+            <section class="profile">
+                <div class="profile__wraper">
+                    <div class="profile__info">
+                        <div class="profile__head">
+                            <h1 class="profile__title">Жак-Ив Кусто</h1>
+                            <button class="profile__edit-button" type="button"><img class="profile__image" src="<%=require('./images/profile__image.svg')%>" alt="Жак-Ив Кусто"></button>
+                        </div>
+                        <p class="profile__subtitle">Исследователь океана</p>
+                    </div>
+                </div>
+                <button class="profile__add-button" type="button"></button>
+            </section>
+
+            <section class="content">
+                <ul class="elements"></ul>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p class="footer__name">&copy; 2022 Mesto Russia</p>
+        </footer>
+    </div>
+
+    <!--Редактирование профиля-->
+    <div class="popup popup_type_profile" id="redactProfiles">
+        <div class="popup__wrapper">
+            <button class="popup__button popup__button_close" type="button" title="Закрытие формы"></button>
+            <form class="popup__form" name="popup_redact_form" id="redactForm" method="get" action="#" novalidate>
+
+                <h2 class="popup__title">Редактировать профиль</h2>
+
+                <label class="popup__field">
+                <input class="popup__row popup__row_data_name" id="name-input" type="text" name="userName" minlength="2" required>
+                <span class="popup__input-error" id="profileNameError"></span>
+                </label>
+
+                <label class="popup__field">
+                <input class="popup__row popup__row_data_profession" id="profession-input" type="text" name="userAbout" minlength="2" required>
+                <span class="popup__input-error" id="profileStatusError"></span>
+                </label>
+
+                <button class="popup__button-submit popup__button-submit_inactive" type="submit" id="redactButton" title="Сохранение и закрытие формы">Сохранить</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Обновление аватара -->
+    <section class="popup popup_type_avatar">
+        <div class="popup__wrapper">
+            <button class="popup__button_close" type="button"></button>
+            <div class="popup__content">
+                <h3 class="popup__title">Обновить аватар</h3>
+                <form name="popup-avatar-form" class="popup__form" novalidate>
+                    <label class="popup__field">
+                <input id="avatar-input" name="url" class="popup__row" type="url" placeholder="Ссылка на аватар" required />
+                <span class="popup__input-error"></span>
+              </label>
+                    <button class="popup__button-submit popup__button-submit_inactive" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Добавления карточки -->
+    <div class="popup popup_add_cards" id="addElement">
+        <div class="popup__wrapper">
+            <button class="popup__button popup__button_close" type="button" title="Закрытие формы"></button>
+            <form class="popup__form" id="addForm" name="element_add_form" method="get" action="#" novalidate>
+                <h2 class="popup__title">Новое место</h2>
+                <label class="popup__field">
+                <input class="popup__row popup__row_card_name" id="element-input" type="text" name="name" minlength="3" placeholder="Название" required>
+                <span class="popup__input-error" id="placeNameError"> </span>
+                </label>
+
+                <label class="popup__field">
+                <input class="popup__row popup__row_card_profession" id="element-url-input" type="url" name="link" minlength="3" placeholder="Ссылка на картинку" required>
+                <span class="popup__input-error" id="placeLinkError"></span>
+                </label>
+
+                <button class="popup__button-submit popup__button-submit_inactive" type="submit" title="Сохранение и закрытие формы">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подтверждение удаления карточки -->
+    <div class="popup popup_type_confirm-deletion">
+        <div class="popup__wrapper">
+            <button class="popup__button_close" type="button"></button>
+            <div class="popup__content">
+                <h3 class="popup__title">Вы уверены?</h3>
+                <form name="popup-confirmation-form" class="popup__form" novalidate>
+                    <button class="popup__button-submit" type="submit">Да</button>
+                </form>
+            </div>
+        </div>
+        </section>
+
+        <!-- element -->
+        <template class="element-tamplate" id="template">
+        <li class="element">
+            <img class="element__image">
+            <div class="element__info" src="#" alt="#">
+                <h2 class="element__title"></h2>
+                <button class="element__button" type="button" title="Лайк"></button>
+            </div>
+            <button class="element__button-del" type="button" title="Удалить"></button>
+        </li>
+    </template>
+
+        <!-- Изображения -->
+        <div class="popup popup_type_photo" id="image">
+            <div class="popup__wrapper">
+                <button class="popup__button popup__button_close" type="button" title="Закрыть"></button>
+                <img class="popup__image" src="#" alt="#">
+                <p class="popup__text"></p>
+            </div>
+        </div>
+
+</body>
+
+</html>
