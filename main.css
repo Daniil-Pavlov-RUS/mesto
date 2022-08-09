@@ -22,6 +22,7 @@
 .element__button_action_active{background-image:url(35948469632d0421d697.svg)}
 .element__btn_action_disabled{background-image:url(1ad06e85f169668a1f36.svg)}
 .element__button-del{background:url(4167baf188ea96c004ee.svg) bottom no-repeat,url(ca9175e7cad629669c20.svg) top no-repeat;background-size:15.44px,18px;border:none;cursor:pointer;height:19px;position:absolute;right:20px;top:20px;width:18px}.element__button-del:hover{opacity:.5;transition:1s}
+.element__button-counter{color:#000;font-size:13px;font-weight:400;line-height:16px;margin:0}
 .popup__button_type_error{border-bottom:1px solid red}
 .footer{margin:0 auto 60px;max-width:880px}@media screen and (max-width:900px){.footer{margin:0 19px}}
 .footer__name{color:#545454;font-size:18px;font-style:normal;font-weight:400;line-height:22px}@media screen and (max-width:900px){.footer__name{font-size:14px;line-height:17px}}
