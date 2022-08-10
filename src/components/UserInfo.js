@@ -17,7 +17,7 @@ export default class UserInfo {
         }
     }
 
-    setUserInfo(userData) {
+    setUserInfo(userData) { //Если вставить setUserInfo( { name, about, avatar, _id } ) + закоментить и зменить в index.js, не работает
         const { userName, userAbout, userAvatar, userId } = userData;
         this._profileNameElement.textContent = userName;
         this._profileAboutElement.textContent = userAbout;
@@ -25,14 +25,14 @@ export default class UserInfo {
         this._userId = userId;
     }
 
-    /*    changeUserInfo({ userName, userAbout }) {
-            this._profileNameElement.textContent = userName;
-            this._profileAboutElement.textContent = userAbout;
-        }
+    changeUserInfo({ userName, userAbout }) {
+        this._profileNameElement.textContent = userName;
+        this._profileAboutElement.textContent = userAbout;
+    }
 
-        setUserAvatar({ newUserAvatar }) {
-            this._profileAvatarElement.src = newUserAvatar;
-        } */
+    setUserAvatar({ newUserAvatar }) {
+        this._profileAvatarElement.src = newUserAvatar;
+    }
 
     getUserId() {
         return this._userId;

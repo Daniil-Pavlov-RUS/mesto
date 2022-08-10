@@ -52,7 +52,7 @@ export default class Card {
             this._cardDelButton.remove();
             this._cardDelButton = null;
         } else {
-            this._cardElement.addEventListener('click', (event) => {
+            this._cardDelButton.addEventListener('click', (event) => {
                 this._handleRemoveButton(event);
             });
         }
