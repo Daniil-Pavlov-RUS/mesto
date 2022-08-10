@@ -25,14 +25,14 @@ export default class UserInfo {
         this._userId = userId;
     }
 
-    changeUserInfo({ userName, userAbout }) {
-        this._profileNameElement.textContent = userName;
-        this._profileAboutElement.textContent = userAbout;
-    }
+    /*    changeUserInfo({ userName, userAbout }) {
+            this._profileNameElement.textContent = userName;
+            this._profileAboutElement.textContent = userAbout;
+        }
 
-    setUserAvatar({ newUserAvatar }) {
-        this._profileAvatarElement.src = newUserAvatar;
-    }
+        setUserAvatar({ newUserAvatar }) {
+            this._profileAvatarElement.src = newUserAvatar;
+        } */
 
     getUserId() {
         return this._userId;

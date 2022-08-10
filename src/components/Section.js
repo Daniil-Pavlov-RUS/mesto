@@ -26,7 +26,7 @@ export default class Section {
         this._containerElement.append(item);
     }
 
-    addItemPrepend(item) {
-        this._containerElement.prepend(item);
-    }
+    /*    addItemPrepend(item) {
+            this._containerElement.prepend(item);
+        } */
 }
